@@ -70,7 +70,7 @@ for i in range(n_iters):
 	    all_losses.append(current_loss / plot_steps)
 	    if (current_loss/len(line_tensor) < min_loss):
 	    	min_loss = current_loss/len(line_tensor)
-	    	torch.save(rnn.state_dict,'bestmodel.pth')
+	    	torch.save(rnn.state_dict(),'bestmodel.pth')
 	    current_loss = 0
  	
 	if (i+1) % print_steps == 0:
